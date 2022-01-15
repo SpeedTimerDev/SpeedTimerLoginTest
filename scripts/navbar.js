@@ -18,7 +18,7 @@ leftT.appendChild(text);
 
 var login = document.createElement("div");
 login.classList.add("loginBtn");
-login.innerHTML = '<div id="g-signin2"></div>';
+login.innerHTML = '<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="120" data-height="35"></div>';
 
 leftT.appendChild(login);
 
