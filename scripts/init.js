@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBoWoW-Sf-_xMSDzWW9P4hVXbQaVtgmEsU",
-    authDomain: "speedtimer-6d0f4.firebaseapp.com",
-    projectId: "speedtimer-6d0f4",
-    storageBucket: "speedtimer-6d0f4.appspot.com",
-    messagingSenderId: "464598425013",
-    appId: "1:464598425013:web:e0b88e6e4392befddd4dfc"
+    apiKey: "AIzaSyDpQP8TQRrYYUQyn5x7Y2dPxk-DLpzwKv4",
+    authDomain: "speedtimer-developer.firebaseapp.com",
+    projectId: "speedtimer-developer",
+    storageBucket: "speedtimer-developer.appspot.com",
+    messagingSenderId: "140569673932",
+    appId: "1:140569673932:web:32249d8e691bab95518269"
 };
 
 firebase.initializeApp(firebaseConfig);
