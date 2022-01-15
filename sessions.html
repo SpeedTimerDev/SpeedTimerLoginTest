@@ -1,0 +1,143 @@
+<html>
+
+<head lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SpeedTimer</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/sessions.css">
+	<link rel="stylesheet" href="styles/visualiser.css">
+	<link rel="stylesheet" href="styles/media.css">
+	<link rel="stylesheet" href="styles/navbar.css">
+	<script src="scripts/navbar.js" async></script>
+	<link rel="icon" href="images/logo1.jpg">
+	<!-- This link -->
+	<link rel="stylesheet" href= "https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+		integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="leftT"></div>
+
+	<div class="rightT">
+		<div class="overlay"></div>
+		<div class="creditpopup">
+			<!-- <a href='https://writingmasterthesis.com/'>https://writingmasterthesis.com/</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=0f5f8532571239cf04afa8e976210d4c75f18e3d'></script>
+			<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/835531/t/7"></script> -->
+			<!-- <script type="text/javascript" src="//counter.websiteout.net/js/5/0/0/1"></script></div> -->
+			<div style="font-size: 200%; text-align: center;">SpeedTimer</div>
+			<br>
+			Bored of using other timers with their appaling design and lack of simplicity? Me too. Instead of
+			waiting for a new timer to come out, I decided to create my own free timer to combat this. And as a Cuber
+			Myself, I won't let you down. Use The SpaceBar to start and stop the timer, and play around with settings
+			and cube types. Happy Cubing!
+			<br>
+			<br>
+			- CoderGuru
+			<br>
+			<br>
+			<br>
+			For suggestions, use <a href="https://app.suggestionox.com/r/speedtimer" target="_blank"
+				style="color: whitesmoke;">This Link</a>.
+			<br>
+			<br>
+			For Other Queries, Contact <a href="mailto:contactspeedtimer@gmail.com" target="_blank"
+				style="color: whitesmoke;">contactspeedtimer@gmail.com</a>
+			<br>
+			<br>
+			<br>
+			Alt + 2: +2 Most Recent Solve<br>
+			Alt + d: DNF Most Recent Solve<br>
+			Alt + z: Delete Most Recent Solve<br>
+			<br>
+			Use The Buttons at The Top Right to Change Scramble or Change to Manual Entry Mode.
+		</div>
+
+		<div class="overlay" id="overlay2" style="display: none;"></div>
+		<div class="solveInfo" style="display: none;">
+			<div class="solveInfoTime">19.56</div>
+			<br>
+			<div class="solveInfoType">3x3</div>
+			<br>
+			<div class="solveInfoPreview"></div>
+			<br>
+			<div class="solveInfoScramble">B2 U F2 D2 R2 F2 R2 U' L2 D2 B L' U2 B L2 F2 D' U' B'</div>
+			<div class="solveInfoClose"><i class="fas fa-times"></i></div>
+		</div>
+
+		<div class="sesTitle">
+			<div>Sessions</div>
+			<button class="newSes">New Session</button>
+		</div>
+
+		<div class="ses">
+			<div class="leftses">
+			</div>
+			<div class="rightses">
+				<div class="sesName">
+					<input type="text" value="Session 01" id="sesName">
+					<div id="delSes"><i class="fas fa-times"></i></div>
+				</div>
+				<div class="sesName" style="font-size: 15px">
+					Type:&nbsp;
+					<select class="scrambleDrop">
+						<option value="2x2">2x2</option>
+						<option value="3x3">3x3</option>
+						<option value="4x4">4x4</option>
+						<option value="5x5">5x5</option>
+						<option value="6x6">6x6</option>
+						<option value="7x7">7x7</option>
+						<option value="Megaminx">Megaminx</option>
+						<option value="Pyraminx">Pyraminx</option>
+						<option value="Skewb">Skewb</option>
+						<option value="Square-1">Square-1</option>
+						<option value="Clock">Clock</option>
+						<option value="Other">Other</option>
+					</select>
+				</div>
+				<div class="sesInfo" style="display: flex">
+					<div class="timerStats session">
+						<div class="best">
+							<div class="bestCaption">Best:</div>
+							<div class="bestTime">-</div>
+						</div>
+						<div class="item">
+							<div class="caption">Avg:</div>
+							<div class="valTime" id="avg">-</div>
+						</div>
+						<div class="item">
+							<div class="caption">Least:</div>
+							<div class="valTime" id="worst">-</div>
+						</div>
+						<div class="item">
+							<div class="caption">Ao5:</div>
+							<div class="valTime" id="ao5">-</div>
+						</div>
+						<div class="item">
+							<div class="caption">Ao12:</div>
+							<div class="valTime" id="ao12">-</div>
+						</div>
+						<div class="item">
+							<div class="caption">Ao100:</div>
+							<div class="valTime" id="ao100">-</div>
+						</div>
+						<div class="item">
+							<div class="caption">Range:</div>
+							<div class="valTime" id="range">-</div>
+						</div>
+					</div>
+					<div class="solves session">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="scripts/sessions.js" async defer></script>
+</body>
+
+</html>

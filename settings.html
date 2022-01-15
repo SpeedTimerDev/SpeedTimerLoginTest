@@ -1,0 +1,190 @@
+<html>
+
+<head lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SpeedTimer</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script lang="javascript" src="libs/xlsx.full.min.js"></script>
+	<script lang="javascript" src="libs/FileSaver.js"></script>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/cubeImage.css">
+	<script src="scripts/navbar.js" async></script>
+	<link rel="stylesheet" href="styles/media.css">
+	<link rel="stylesheet" href="styles/settings.css">
+	<link rel="stylesheet" href="styles/navbar.css">
+	<link rel="icon" href="images/logo1.jpg">
+	<!-- This link -->
+	<link rel="stylesheet" href= "https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+		integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="leftT"></div>
+
+	<div class="rightT">
+		<div class="overlay"></div>
+		<div class="creditpopup">
+			<!-- <a href='https://writingmasterthesis.com/'>https://writingmasterthesis.com/</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=0f5f8532571239cf04afa8e976210d4c75f18e3d'></script>
+			<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/835531/t/7"></script> -->
+			<!-- <script type="text/javascript" src="//counter.websiteout.net/js/5/0/0/1"></script></div> -->
+			<div style="font-size: 200%; text-align: center;">SpeedTimer</div>
+			<br>
+			Bored of using other timers with their appaling design and lack of simplicity? Me too. Instead of
+			waiting for a new timer to come out, I decided to create my own free timer to combat this. And as a Cuber
+			Myself, I won't let you down. Use The SpaceBar to start and stop the timer, and play around with settings
+			and cube types. Happy Cubing!
+			<br>
+			<br>
+			- CoderGuru
+			<br>
+			<br>
+			<br>
+			For suggestions, use <a href="https://app.suggestionox.com/r/speedtimer" target="_blank"
+				style="color: whitesmoke;">This Link</a>.
+			<br>
+			<br>
+			For Other Queries, Contact <a href="mailto:contactspeedtimer@gmail.com" target="_blank"
+				style="color: whitesmoke;">contactspeedtimer@gmail.com</a>
+			<br>
+			<br>
+			<br>
+			Alt + 2: +2 Most Recent Solve<br>
+			Alt + d: DNF Most Recent Solve<br>
+			Alt + z: Delete Most Recent Solve<br>
+			<br>
+			Use The Buttons at The Top Right to Change Scramble or Change to Manual Entry Mode.
+		</div>
+		<div class="name">
+			Settings
+			<!-- <a href="logout.php">Logout</a> -->
+		</div>
+
+		<div class="settings">
+			<div class="setting">
+				<div class="cap">Background Image:</div>
+				<div class="set">
+					<div class="bgImg">
+						<div>
+							<input type='text' class="inputSet" id='getval'
+								placeholder="Type URL of image here..."><br><br>
+							<p class="ohdwed" style="font-size: 50%;">Go to an Image on Your Browser, <br> Right Click,
+								and get Image Address, <br> Then paste
+								it here.</p>
+						</div>
+						<button class="btnset" id="imgbtnset">Default</button>
+					</div>
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Timer Font Size:
+				</div>
+				<div class="set">
+					<input id="timerSize" class="inputSet" type="range" value="15" min="1" max="40">
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Button Colour:
+				</div>
+				<div class="set">
+					<!-- <button class = "btnset" id = "clrAllSolves">Delete All Solves</button> -->
+					<input class="inputSet" id="colorPicker" type="color" value="#323232">
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Alg Image Colour (OLL & 2LOLL Only):
+				</div>
+				<div class="set">
+					<!-- <button class = "btnset" id = "clrAllSolves">Delete All Solves</button> -->
+					<input class="inputSet" id="algImgCol" type="color" value="#dba204">
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Visualiser Border:
+				</div>
+				<div class="set">
+					<input class="inputSet" id="borderView" type="checkbox">
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">3D Visualiser (Draggable):
+				</div>
+				<div class="set">
+					<input class="inputSet" id="d3vis" type="checkbox">
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Icons on Top:
+				</div>
+				<div class="set">
+					<input class="inputSet" id="iconsTop" type="checkbox">
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Use Stackmat:
+				</div>
+				<div class="set">
+					<input class="inputSet" id="stackmat" type="checkbox">
+				</div>
+			</div>
+			<!-- <div class="setting">
+				<div class="cap">WCA Inspection:
+				</div>
+				<div class="set">
+					<input class="inputSet" id="inspection" type="checkbox">
+				</div>
+			</div> -->
+			<div class="setting">
+				<div class="cap">Export Data:
+				</div>
+				<div class="set">
+					<a style="text-decoration: none; font-size: 80%;" target="_blank" class="btnset"
+						id="exportData">Export</a>
+				</div>
+			</div>
+			<!-- <div class="setting">
+				<div class="cap">Import Data:
+				</div>
+				<div class="set">
+					<input type="file" class="btnset" id="import" onchange="importTimes(this);"></input>
+				</div>
+			</div> -->
+			<div class="setting">
+				<div class="cap">Delete All Solves:
+				</div>
+				<div class="set">
+					<button class="btnset" id="clrAllSolves">Delete All Solves</button>
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Reset All Algorithms:
+				</div>
+				<div class="set">
+					<button class="btnset" id="clrAllAlgs">Reset Algorithms</button>
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Reset All Settings:
+				</div>
+				<div class="set">
+					<button class="btnset" id="clrAllSettings">Reset Settings</button>
+				</div>
+			</div>
+			<div class="setting">
+				<div class="cap">Delete All Data:
+				</div>
+				<div class="set">
+					<button class="btnset" id="clrAll">Delete All Data</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<script src="scripts/settings.js" async defer></script>
+	<script src="scripts/import.js" async defer></script>
+	<script src="scripts/export.js" async defer></script>
+</body>
+
+</html>
