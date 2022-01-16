@@ -25,6 +25,7 @@
 // }
 
 function onSignIn(googleUser) {
+    alert("...")
     var profile = googleUser.getBasicProfile();
 
     var userEntity = {
