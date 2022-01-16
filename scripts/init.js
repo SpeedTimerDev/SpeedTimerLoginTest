@@ -40,12 +40,12 @@ function onSignIn(googleUser) {
     afterSignIn(userEntity);
 }
 
-document.getElementById("signoutLink").addEventListener("click", function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-        localStorage.removeItem("myUserEntity");
-    });
-});
+// document.getElementById("signoutLink").addEventListener("click", function signOut() {
+//     var auth2 = gapi.auth2.getAuthInstance();
+//     auth2.signOut().then(function () {
+//         localStorage.removeItem("myUserEntity");
+//     });
+// });
 
 // function afterSignIn(userProfile) {
 //     var googleProfile = userProfile;
