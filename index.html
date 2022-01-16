@@ -9,7 +9,8 @@
 	<meta name="title" content="SpeedTimer - Cubing Timer">
 	<meta name="keywords" content="cubing, timer, cubetimer, cstimer">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google-signin-client_id" content="206519854258-gn1a9mnpcl6f3lfv2jqefb31kveqsgbd.apps.googleusercontent.com">
+	<meta name="google-signin-client_id"
+		content="206519854258-gn1a9mnpcl6f3lfv2jqefb31kveqsgbd.apps.googleusercontent.com">
 	<script src="https://accounts.google.com/gsi/client" async defer></script>
 	<link rel="stylesheet" href="styles/navbar.css">
 	<link rel="stylesheet" href="styles/style.css">
@@ -17,12 +18,12 @@
 	<link rel="stylesheet" href="styles/cubeimage.css">
 	<link rel="stylesheet" href="styles/media.css">
 	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
 	<script src="scripts/navbar.js" async></script>
 	<script src="libs/stackmat.js" async></script>
 	<link rel="stylesheet" href="styles/cubeslist.css">
 	<link rel="icon" href="images/logo1.jpg">
-	<link rel="stylesheet" href= "https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
 		integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 
@@ -95,11 +96,16 @@
 			<br>
 			<div class="solveInfoScramble">B2 U F2 D2 R2 F2 R2 U' L2 D2 B L' U2 B L2 F2 D' U' B'</div>
 			<br>
-			<div class="solveInfoShare"><span>Share Time <span id = "stroke"><i class="fas fa-link"></i></span></span></div>
+			<div class="solveInfoShare"><span>Share Time <span id="stroke"><i class="fas fa-link"></i></span></span>
+			</div>
 			<div class="solveInfoClose"><i class="fas fa-times"></i></div>
 		</div>
-		<div class="g-signin2" onclick = "alert('.')" data-onsuccess="onSignIn" data-theme="dark" data-width="120" data-height="35"></div>
-		<div id="signoutLink">Log out</div>
+		<div id="g_id_onload" data-client_id="206519854258-gn1a9mnpcl6f3lfv2jqefb31kveqsgbd.apps.googleusercontent.com"
+			data-login_uri="https://speed-timer.netlify.app/" data-auto_prompt="false">
+		</div>
+		<div class="g_id_signin" data-type="standard" data-size="large" data-theme="dark" data-text="sign_in_with"
+			data-shape="rectangular" data-logo_alignment="left">
+		</div>
 		<div class="stopwatch">
 			<div class="sHold">
 				<div class="scramble"></div>
@@ -170,7 +176,7 @@
 	<script src="https://cdn.cubing.net/js/cubing/twisty" type="module"></script>
 	<script src="scripts/defaults.js" async defer></script>
 	<script src="scripts/scrambles.js" async defer></script>
-	<script src="scripts/script.js" type = "module" async defer></script>
+	<script src="scripts/script.js" type="module" async defer></script>
 	<!-- <script src="scripts/visualiser.js" async defer></script> -->
 
 	<!-- Hitsteps TRACKING CODE - Manual 2021-10-16 - DO NOT CHANGE -->
